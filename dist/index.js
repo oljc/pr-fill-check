@@ -24739,12 +24739,7 @@ const core = __importStar(__nccwpck_require__(2186));
 // import { wait } from './wait'
 async function run() {
     try {
-        const ms = core.getInput('milliseconds');
-        core.debug(`Waiting ${ms} milliseconds ...`);
-        core.debug(new Date().toTimeString());
-        // await wait(parseInt(ms, 10))
-        core.debug(new Date().toTimeString());
-        core.setOutput('time', new Date().toTimeString());
+        const token = core.getInput('token');
     }
     catch (error) {
         if (error instanceof Error)
@@ -24752,6 +24747,7 @@ async function run() {
     }
 }
 exports.run = run;
+run();
 
 
 /***/ }),
@@ -26637,18 +26633,12 @@ module.exports = parseParams
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-var exports = __webpack_exports__;
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const main_1 = __nccwpck_require__(399);
-(0, main_1.run)();
-
-})();
-
-module.exports = __webpack_exports__;
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __nccwpck_require__(399);
+/******/ 	module.exports = __webpack_exports__;
+/******/ 	
 /******/ })()
 ;
