@@ -1,0 +1,21 @@
+name: 'PR Check Fill'
+description: 'Check if PR adhere to the PULL_REQUEST_TEMPLATE.'
+author: 'LIjiAngChen8'
+
+branding:
+  icon: 'check-circle'
+  color: 'white'
+
+inputs:
+  token:
+    description: Secret GitHub API token to use for making API requests.
+    default: ${{ github.token }}
+    required: true
+
+#outputs:
+#  result:
+#    description: action result
+
+runs:
+  using: node20
+  main: dist/index.js
