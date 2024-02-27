@@ -19,6 +19,8 @@ export async function run(): Promise<void> {
 
       // 往 PR 评论
       await createComment(owner, repo, number, 'Test Check PR Fill')
+    } else {
+      core.info('This action only supports PRs')
     }
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
