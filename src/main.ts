@@ -13,7 +13,7 @@ export async function run(): Promise<void> {
       // const body = context.payload.pull_request?.body
       const number = context.payload.pull_request?.number
 
-      core.info(`[Init] [${owner}/${repo} ===> ${number}]`);
+      core.info(`[Init] [${owner}/${repo} ===> ${number}]`)
 
       if (!number) {
         core.info('No PR number found')
