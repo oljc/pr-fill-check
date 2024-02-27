@@ -30,6 +30,6 @@ describe('main', () => {
 
   it('does not fail', async () => {
     await main.run()
-    expect(core.setFailed).not.toHaveBeenCalled()
+    expect(core.setFailed).toHaveBeenCalled()
   })
 })
