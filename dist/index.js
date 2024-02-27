@@ -29126,14 +29126,15 @@ async function run() {
         const owner = context.repo.owner;
         const repo = context.repo.repo;
         if (context.eventName.includes('pull_request')) {
-            // const body = context.payload.pull_request?.body
             const number = context.payload.pull_request?.number;
-            if (!number) {
-                core.info('No PR number found');
-                return;
-            }
+            if (!number)
+                return core.info('The PR number was not found');
+            core.info(`PR: https://github.com/${owner}/${repo}/pull/${number}`);
             // 往 PR 评论
             await (0, util_1.createComment)(owner, repo, number, 'Test Check PR Fill');
+        }
+        else {
+            core.info('This action only supports PRs');
         }
     }
     catch (error) {
