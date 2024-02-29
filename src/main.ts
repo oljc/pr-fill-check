@@ -13,7 +13,6 @@ export async function run(): Promise<void> {
       const number = context.payload.pull_request?.number
       if (!number) return core.info('The PR number was not found')
       core.info(`PR: https://github.com/${owner}/${repo}/pull/${number}`)
-
       // 往 PR 评论
       await createComment(owner, repo, number, 'Test Check PR Fill')
     } else {
