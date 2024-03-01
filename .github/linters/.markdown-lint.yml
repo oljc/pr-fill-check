@@ -7,6 +7,14 @@ MD013:
   line_length: 180
   tables: false
 
+# 不限制文档的第一个非空行标题级别
+MD025:
+  front_matter_title: false
+
+# 允许标题中的尾随标点符号
+MD026:
+  punctuation: ".,;:!"
+
 # Ordered list item prefix
 MD029:
   style: one
