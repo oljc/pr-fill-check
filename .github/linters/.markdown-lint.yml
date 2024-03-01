@@ -11,9 +11,9 @@ MD013:
 MD025:
   front_matter_title: false
 
-# 允许标题中的尾随标点符号
+# 允许标题中的尾随任意标点
 MD026:
-  punctuation: ".,;:!"
+  punctuation: ""
 
 # Ordered list item prefix
 MD029:
